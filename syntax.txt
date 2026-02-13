@@ -1,0 +1,69 @@
+HLC, a language built on the C programming language, HLC will implement the easiness of python and high level languages, to make sure it can run low level, the syntax will be the following:
+
+NOTES:
+
+%c allows anything to be put, floats, strings, integers.
+we can now assign variables to input directly without doing scanf
+the operating library (embedded library) will allow us to create a simple operating system that has a shell (needsthe shell library) and can do simple commands like the Linux kernel can do.
+
+
+FIRST: HLC Basics
+
+
+include stdio.h
+include time.h
+
+
+main (
+	char name[50]
+	int val = 1
+	char string = "Hello"
+	input("What's your name?", name)
+	printf("Hello %s", name)
+	printf("Time at your local area is: %c", time.hms)
+	printf("the value of val is: %d", val)
+	printf("the string is: %s", string)
+)
+
+
+SECOND: operating systems using HLC
+
+
+include operating.h
+include shell.h
+
+main.operatingsystem (
+	char prompt = ">" 
+	shell.usingprompt[{prompt}](
+		start.shell()
+	)
+	COMMANDS=[echo, clear, ls, rm, cd, rmdir, exit]
+	for cmd in COMMANDS through operating.h (
+		operatingsystem.commands.enablefromlist[COMMANDS]
+		important(
+			
+		)
+	)
+)
+
+
+THIRD: graphical uses in HLC
+
+
+NOTES: this will run a version of xfce4 we will build together from the opensource xfce.
+
+
+include operating.h
+include graphicaloperating.h
+include xfce >> this version of xfce has all the dependencies like the window managger, xfceterminal, and etc..
+
+main.operatingsystem.graphical (
+	using graphicaloperating.h with xfce(
+		main.operatingsystem.graphical(
+			using xfce (
+				main.operatingsystem.graphical.run()
+			)
+		)
+	)
+)
+
